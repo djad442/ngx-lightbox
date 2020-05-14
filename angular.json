@@ -73,6 +73,41 @@
           }
         }
       }
+    },
+    "ngx-lightboxWithRotate": {
+      "projectType": "library",
+      "root": "projects/ngx-lightbox-with-rotate",
+      "sourceRoot": "projects/ngx-lightbox-with-rotate/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-lightbox-with-rotate/tsconfig.lib.json",
+            "project": "projects/ngx-lightbox-with-rotate/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-lightbox-with-rotate/src/test.ts",
+            "tsConfig": "projects/ngx-lightbox-with-rotate/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-lightbox-with-rotate/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-lightbox-with-rotate/tsconfig.lib.json",
+              "projects/ngx-lightbox-with-rotate/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-lightbox"

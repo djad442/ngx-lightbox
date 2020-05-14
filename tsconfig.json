@@ -14,7 +14,15 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-lightbox-with-rotate": [
+        "dist/ngx-lightbox-with-rotate"
+      ],
+      "ngx-lightbox-with-rotate/*": [
+        "dist/ngx-lightbox-with-rotate/*"
+      ]
+    }
   },
   "include": [
     "src/*.ts"

@@ -20,7 +20,7 @@ import {
 } from './lightbox-event.service';
 
 @Component({
-  template: `
+  template: `  
     <div class="lb-outerContainer transition" #outerContainer>
       <div class="lb-container" #container>
         <img class="lb-image" [src]="album[currentImageIndex].src" class="lb-image animation fadeIn" [hidden]="ui.showReloader" #image>
@@ -32,8 +32,8 @@ import {
           <a class="lb-cancel"></a>
         </div>
       </div>
-    </div>
-    <div class="lb-dataContainer" [hidden]="ui.showReloader" #dataContainer>
+    </div>    
+    <div class="lb-dataContainer" [hidden]="ui.showReloader" #dataContainer>          
       <div class="lb-data">
         <div class="lb-details">
           <span class="lb-caption animation fadeIn" [hidden]="!ui.showCaption" [innerHtml]="album[currentImageIndex].caption" #caption>
@@ -43,6 +43,12 @@ import {
         <div class="lb-closeContainer">
           <a class="lb-close" (click)="close($event)"></a>
         </div>
+        <div class="lb-closeContainer">
+          <a class="lb-rotate-right" (click)="rotateRight($event)" title="Rotate Right"></a>
+        </div>
+        <div class="lb-closeContainer">
+          <a class="lb-rotate-left" (click)="rotateLeft($event)" title="Rotate Left"></a>
+        </div>               
       </div>
     </div>`,
   selector: '[lb-content]',
@@ -71,6 +77,8 @@ export class LightboxComponent implements OnInit, AfterViewInit, OnDestroy, OnIn
   private _event: any;
   private _windowRef: any;
   private _documentRef: Document;
+  private _currentRotation = 0;
+
   constructor(
     private _elemRef: ElementRef,
     private _rendererRef: Renderer2,
@@ -163,6 +171,29 @@ export class LightboxComponent implements OnInit, AfterViewInit, OnDestroy, OnIn
     }
   }
 
+  public rotateRight($event: any): void {
+    $event.stopPropagation();
+    this._currentRotation += 90;
+    if (this._currentRotation>180){
+      this._currentRotation = -90;
+    }
+    console.log(`rotate(${this._currentRotation}deg)`);
+    this._rendererRef.setStyle(this._imageElem.nativeElement, 'transform', `rotate(${this._currentRotation}deg)`);
+    if (this._currentRotation==90 ||this._currentRotation==-90){
+
+    }
+  }
+
+  public rotateLeft($event: any): void {
+    $event.stopPropagation();
+    this._currentRotation -= 90;
+    if (this._currentRotation<-180){
+      this._currentRotation = 90;
+    }
+    console.log(`rotate(${this._currentRotation}deg)`);
+    this._rendererRef.setStyle(this._imageElem.nativeElement, 'transform', `rotate(${this._currentRotation}deg)`);
+  }
+
   public nextImage(): void {
     if (this.album.length === 1) {
       return;
@@ -239,6 +270,9 @@ export class LightboxComponent implements OnInit, AfterViewInit, OnDestroy, OnIn
     let windowWidth;
     let naturalImageWidth;
     let naturalImageHeight;
+
+    this._currentRotation = 0;
+    this._rendererRef.setStyle(this._imageElem.nativeElement, 'transform', `rotate(${this._currentRotation}deg)`);
 
     // set default width and height of image to be its natural
     imageWidth = naturalImageWidth = this._imageElem.nativeElement.naturalWidth;

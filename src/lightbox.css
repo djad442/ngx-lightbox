@@ -199,6 +199,39 @@ html.lb-disable-scrolling {
   -o-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
+.lb-data .lb-rotate-right{
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAABCxJREFUeJzt292LVVUcxvHPNGcmB5tJGZSpNIOibgShbuouIp1o6MUoDIKgxLwoEHoh+ge6iIogL7opKClFKKJowOpGqKCrMCzI1DAHJiLH1MLQnOlinclp3OectV/WOSc9X1gwzOy1f8/v2Wuvt72GHj16XMr0tTneKG7EqvrPSzCHv3AMR3EAx9usKxkrsRm78LOQbEw5gp14DCvarrokNTyAPTgnPulG5RwmcT/6C+i5CmsKZ5ODAWzBYeWTblR+FFpFLVLTNucfwgd1jUkYxw/SJb647MftLTQ9k1HvwfKp/pdleKdAAlWVN7A0Q9dzDa5/qrrUWSdtc48t3+OmBbqeb3JtZQZM4M8uSH6+HBdeiRdaXFeJAQ/h7y5IenE5G3HNBQbE9qbzTAjjc5HhaJ45YZyfwilhMnYFrsZ1uKzgffPmkrvSOuxWLPlpYTI0ia+FxLMYws24Cw/jhgKxkrBMsQ5vHzYp9nT6sAFfFIhbeR/wds5AM8IUuGhzXkif0Bp+zamhMgPGcwbZK7zPVTNWv3dbDRiQb4a3A4PF8otiEN/k0FPagC05br5DNU2+Gc/m0FPagJr4jm+vtE+e8snnNmBj5E1npHnnF5K1sEluwJ7Im24uk1kET0fqqNSAleI2M/ZJ+95vi9BQyoBG4u9p8reFvIjZ2GxyMoZXEt37XxoluT6i7jTer1DLYgaVW3Nk0WgKfgExG5ivViwui90ROmLLIVy5OEDWtvgofosQtx6f58mmAAO4V9jYLMMpfIgTMRffprWbsxguKaoryOoDVkXUOyLH+9TNZBkwGlFvqmohnSLLgCUR9S6Kp0/6xUvXk2XA6Yh6F0UHSLYBxyLqra5aSKfIMiCmg7sWIxVr6QhZBhyIqNeHWyvW0hGyDJgRpsKtuLtiLV3FTq1ng9MSfm5uF42GwU8j6o5J8Lm5W1gh7vvfftUvWbuGSXHLzK2dEpia+8QZ8LvOzAtGcIuEJ936cVCcCV/i8lRCMljq/AeS1yU04XHxOy5lP5vHMoCPFsV+TSITasIRlFgTdknbEoaEnZ1GW3RJTLizQcBG5Stp+oQ1wtmCZrFflsiEt1oEzuoYt6rmlejHE8J+XkzslyQwYUQ4pJjHhDl8h0cU+244IByu+LZA3IkC8VqyVtgJyitmTjjcsL0ubHmTGMuFNcZ2/FIw1klcH5tU3qYyjo+VXwNMC8vuE3UNI7hG+Y+sZwWTPyt5n6ZsxBnFnk7KckY4UN0WNij+OqQofwits62sFTZPOp38YeEIX0cYxpstBKYs7wpH+DrOHcKQ167ED0o01JWhJvwzQ+wCqkg5iielP49Uin6hN/5ENYeqZ4VhbZP/4RbcKB4VjtAdEp/0T3hPOH80llJgu/9tblg4AL1aMGeo/vvTwm70lDDlPtlmXT169LhE+QcQXwNd6o0O6QAAAABJRU5ErkJggg==');
+  text-align: right;
+  outline: none;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.lb-data .lb-rotate-left{
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAABCRJREFUeJzt28+LHEUUwPHPuJPsirprVkVRV3JQQfGi4MWDiD8jiYkKQUURokJAxF8E/wTBiygqySEIgmAkejEqohDwEBE9iEFXXTfqBhMPEmNcNZgfjofaJclsz0x1dffs0s4X6tJTNe9HV796Vf2aAQMG/J9p9FneOC7HxTgHI3M6HMYB/Iwp/NZnvSrjfDyMbZhBK7LN4A1swHl913qOSwQD8tLE3fgAx8Ub3akdw/tYh6Fka3KwHG+dJPzRyHFNPIIfFDe6U5vGQ3OyKuPeDMFP9BhzE77JGFdVm8TNJdiayZMdhD6V0fcsbC3BoNT2KkbLMz3QyQEtPH1Svyvx3SIaP9++x1X9ckALm4Tp98cSMH6+zeK2fjmgJQTHxTa6vR3BXXmNTY2mRZajFn7CPuHOEWLJhLD0piZny/Am1uDDAvpFzYC8bQbP4Qac0UX2KG7FC/glUdasgjGhTAd8KtyR0xL0WIb78FWC3ClhViVRhgN+xf3K2WsMYSN+z6nD1lSBRR3wMS5IFd6FCezKqcuNKYKKOOBLIZWuimFhkxSrz9cSAn3RGfBMonGxDAm7y1h9NuQVUEYM2JRoXCzD+CRSl2k5l+2yVoGsvUOZTIgPjHfm+eMyl8Feu8iibIzU4708f1p2IhR7npDCkBDoeulwTDiCW0BKgpKXFzsJL4HjeDai3xBWZ/2Q5YC/imiUQVO1S+N2IfHqxS2xfziOH5X3CLweK7gAL0fosSdrYKdUdYVwCHlmQcX2YYfwDFbJarwb0W/UiR1orVghbjZe3T6wH0GwHxwUts+9mGi/UBcHEN4q9WLBalQnBxyK6HN6+4U6OSCJOjlgLKLP4fYLdXLAggCXwYH2C3VxwLi4U6i97Rfq4oDrIvstyAbr4oDMjU4be9Q0CxwWNkO9ssDXsgbXYQbcg3Mj+n1UtSKLQRPf6n33jwqBsnY8Jm4TtKMqBRq4VvFtcworxb+iX1uFAg1snhPwuYw8u0JG8Jk446dUUFzVwCttgt5WcfHSHE0nirhi2oNlK9DASx2EbReWpaoYkc/43Uq++w3h3X03obuEStCyWSl+2s+368tUoIHnIwUfFCpEy8gzmkK0z1uTtKUE2aewKqcCLXyB9dJiw7Dw/Mas8+1tUvdKlCQuxZ8JyrSwX3hBsgpnd5ExLlSUbBaX3ma1Q7gi1qi8FRy34x3Fo/1+4QxvVlB6TNjPFy2sOCLouLPg/3RlvaVZJvcP7qjQ7lNYg78rNijvtE8qhynCNUK932IbPynHM18240Jx4mIZv0UF0T6Fdcp9odqr7VZyklMGI3hciO5VGT4l5AZ9+XIkleVChedO/Ku40UeF/fxaS9zwLC4UPqPZJl/AnBbO8B5Q8UlOvz+bG8NluEgwbP4MYf6zub1qfHo7YMCApcd/luEkUaxyyuIAAAAASUVORK5CYII=') rgb(255,255,255);
+  background-blend-mode: hard-light;
+  text-align: right;
+  outline: none;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
 
 .lb-data .lb-close:hover {
   cursor: pointer;
